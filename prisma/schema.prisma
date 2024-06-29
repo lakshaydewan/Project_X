@@ -26,6 +26,6 @@ model Order {
   orderDetails   Json
   paymentStatus  Boolean @default(false)
   userId         String
-  user           User    @relation(fields: [userId], references: [id])
+  user           User    @relation(fields: [userId], references: [email])
   createdAt      DateTime @default(now())
 }
